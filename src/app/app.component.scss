@@ -1,0 +1,24 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.icon {
+  margin-top: 2px;
+  margin-left: -6px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-image: url('../assets/media-kit/algo-icon.svg');
+}
+
+button {
+  &.next, &.prev {
+    font-size: 14px;
+    height: 51.31px;
+    width: 100px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
