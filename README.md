@@ -4,6 +4,12 @@
 
 This tool enables users to use new or existing credentials from the Algorand blockchain, on various networks such as (mainnet and testnet) to create Algorand Standard Assets (ASA).
 
+<br/>
+
+> Assets that represent many of the same type, like a stablecoin, may be referred to as fungible assets. Single, unique assets are referred to as non-fungible assets.
+
+<br/>
+
 ## Installation
 
 Clone the respository
@@ -54,6 +60,8 @@ node createAccounts.js
 
 2). Copy Addresses and Mnenomic keys in a seperate location
 
+3). Add Algo's to each test account via [Test Network Faucet](https://bank.testnet.algorand.network/)
+
 <br />
 
 ### Main Network
@@ -72,9 +80,23 @@ node createAccounts.js
   },
 ```
 
-## Contributing
+## Debug
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Uncomment inside app.js
+
+```bash
+// browserWinder.webContents.openDevTools()
+```
+
+## Donate
+
+All of this software is open source and meant to improve productivity. Consider funding me!
+
+Algorand: `6Q2GWWMPSTTIM27IRKRQHJHHGOUM5K254ORZORVYR52XKZ7LKEAS2X4IE4`
+
+Bitcoin: `bc1ql0q533mwk5m29l69gh2wtgq0lxcv0f50v5r2qp`
+
+Ethereum: `0x70B592d81A045e57b849e2b2754630115671b1B7`
 
 Please make sure to update tests as appropriate.
 

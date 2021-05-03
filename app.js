@@ -21,7 +21,7 @@ function createWindow () {
     })
   );
   // Open the DevTools.
-  browserWinder.webContents.openDevTools()
+  // browserWinder.webContents.openDevTools()
 
   browserWinder.on('closed', function () {
     browserWinder = null
