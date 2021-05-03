@@ -12,9 +12,9 @@
   },
   "browser": {
     "http": false,
-    "https":false,
+    "https": false,
     "net": false,
-    "crypto":false,
+    "crypto": false,
     "path": false,
     "stream": false,
     "tls": false
