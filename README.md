@@ -2,6 +2,8 @@
 
 ![Algorand](https://www.algorand.com/assets/media-kit/logos/full/png/algorand_full_logo_white.png)
 
+## Overview
+
 This tool enables users to use new or existing credentials from the Algorand blockchain, on various networks such as (mainnet and testnet) to create Algorand Standard Assets (ASA).
 
 <br/>
@@ -9,6 +11,16 @@ This tool enables users to use new or existing credentials from the Algorand blo
 > Assets that represent many of the same type, like a stablecoin, may be referred to as fungible assets. Single, unique assets are referred to as non-fungible assets.
 
 <br/>
+
+# Flow
+
+![Step 1](https://raw.githubusercontent.com/garrett-vorce/algorand-generator/master/src/assets/steps/1/1.png)
+
+![Step 2](https://raw.githubusercontent.com/garrett-vorce/algorand-generator/master/src/assets/steps/2/2.png)
+
+![Step 3](https://raw.githubusercontent.com/garrett-vorce/algorand-generator/master/src/assets/steps/3/3.png)
+
+![Popup](https://raw.githubusercontent.com/garrett-vorce/algorand-generator/master/src/assets/algoExplorer/popup.png)
 
 ## Installation
 
