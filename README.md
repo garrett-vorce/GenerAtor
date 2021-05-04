@@ -4,11 +4,11 @@
 
 ## Overview
 
-This tool enables users to use new or existing credentials from the Algorand blockchain, on various networks such as (mainnet and testnet) to create Algorand Standard Assets (ASA).
+This tool enables users to use new or existing credentials on the Algorand blockchain, on various networks such as (Main Net and Test Net) to create Algorand Standard Assets (ASA).
 
 <br/>
 
-> Assets that represent many of the same type, like a stablecoin, may be referred to as fungible assets. Single, unique assets are referred to as non-fungible assets.
+> Assets that represent many of the same type, like a stable coin, may be referred to as fungible assets. Single, unique assets are referred to as non-fungible assets.
 
 <br/>
 
@@ -24,7 +24,7 @@ This tool enables users to use new or existing credentials from the Algorand blo
 
 ## Installation
 
-Clone the respository
+Clone the repository
 
 ```bash
 git clone https://github.com/garrett-vorce/algorand-generator.git
@@ -64,13 +64,13 @@ export const networks = [
 
 ### Test Network
 
-1). Generate 3 acccounts
+1). Generate 3 accounts
 
 ```bash
 node createAccounts.js
 ```
 
-2). Copy Addresses and Mnenomic keys in a seperate location
+2). Copy Addresses and Mnenomic keys in a separate location
 
 3). Add Algo's to each test account via [Test Network Faucet](https://bank.testnet.algorand.network/) (+10 ALGO per request)
 
@@ -95,7 +95,7 @@ node createAccounts.js
 4). Minimum Balances
 
 - All accounts must have a minimum balance of 0.1 ALGO
-- Main account must have an account balanace of >= 0.2 ALGO
+- Main account must have an account balance of >= 0.2 ALGO
 
 ## Debug
 
