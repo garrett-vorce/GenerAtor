@@ -1,7 +1,7 @@
 # Algorand - ASA Token Generator - 1.0
 
 ![Algorand](https://www.algorand.com/assets/media-kit/logos/full/png/algorand_full_logo_white.png)
-[GenerAtor](https://raw.githubusercontent.com/garrett-vorce/GenerAtor/master/src/assets/logo/Generator-Logo.png)
+![GenerAtor](https://raw.githubusercontent.com/garrett-vorce/GenerAtor/master/src/assets/logo/Generator-Logo.png)
 
 ## Overview
 
