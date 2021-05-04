@@ -60,7 +60,7 @@ node createAccounts.js
 
 2). Copy Addresses and Mnenomic keys in a seperate location
 
-3). Add Algo's to each test account via [Test Network Faucet](https://bank.testnet.algorand.network/)
+3). Add Algo's to each test account via [Test Network Faucet](https://bank.testnet.algorand.network/) (+10 ALGO per request)
 
 <br />
 
@@ -80,6 +80,11 @@ node createAccounts.js
   },
 ```
 
+4). Minimum Balances
+
+- All accounts must have a minimum balance of 0.1 ALGO
+- Main account must have an account balanace of >= 0.2 ALGO
+
 ## Debug
 
 Uncomment inside app.js
@@ -98,7 +103,11 @@ Bitcoin: `bc1ql0q533mwk5m29l69gh2wtgq0lxcv0f50v5r2qp`
 
 Ethereum: `0x70B592d81A045e57b849e2b2754630115671b1B7`
 
-Please make sure to update tests as appropriate.
+# Social
+
+[Medium](https://garrettvorce.medium.com/)
+
+[Publish0x](https://www.publish0x.com/garrettv)
 
 ## License
 

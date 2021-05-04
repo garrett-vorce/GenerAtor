@@ -2,6 +2,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+.mat-step-header {
+  pointer-events: none !important;
+}
+
 .icon {
   margin-top: 2px;
   margin-left: -6px;

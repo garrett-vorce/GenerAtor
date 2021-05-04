@@ -60,5 +60,14 @@
         </div>
       </form>
     </mat-step>
+    <mat-step>
+      <form style="display: flex; flex-direction: column;">
+        <ng-template matStepLabel>Result</ng-template>
+        <div style="margin-bottom: 15px;"></div>
+        <div style="display: flex; justify-content: space-between;">
+          <button mat-raised-button matStepperPrevious class="prev" [disabled]="isLoading">Back</button>
+        </div>
+      </form>
+    </mat-step>
   </mat-horizontal-stepper>
 </div>
