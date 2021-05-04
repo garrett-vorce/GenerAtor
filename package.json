@@ -1,5 +1,8 @@
 {
   "name": "algo-token-generator",
+  "author": "Garrett Vorce <garrett.vorce@gmail.com> (https://medium.com/@garrettvorce)",
+  "url" : "https://github.com/garrett-vorce/algorand-generator/issues",
+  "email" : "garrett.vorce@gmail.com",
   "main": "app.js",
   "version": "1.0.0",
   "scripts": {

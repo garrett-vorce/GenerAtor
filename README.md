@@ -93,9 +93,9 @@ Uncomment inside app.js
 // browserWinder.webContents.openDevTools()
 ```
 
-## Donate
+## Donation
 
-All of this software is open source and meant to improve productivity. Consider funding me!
+If this project helps you reduce time to develop, consider tipping! :)
 
 Algorand: `6Q2GWWMPSTTIM27IRKRQHJHHGOUM5K254ORZORVYR52XKZ7LKEAS2X4IE4`
 

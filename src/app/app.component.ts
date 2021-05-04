@@ -1,5 +1,12 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ViewEncapsulation,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatStepper } from '@angular/material/stepper';
 import { Subject } from 'rxjs';
 import { AlgoTokenGeneratorService } from './services/algoTokenGenerator.service';
 import { networks } from './utils/networks';
@@ -11,6 +18,10 @@ import { networks } from './utils/networks';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit, OnDestroy {
+  response: any = null;
+  assetId: string;
+  assetLink: string;
+  @ViewChild('stepper', { static: false }) stepper: MatStepper;
   buttonText: string = 'Create';
   isLoading: boolean = false;
   title: string =
@@ -18,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   destroyed$: Subject<boolean> = new Subject<boolean>();
-  networks: { name: string; host: string }[] = networks;
+  networks: { name: string; host: string; token: string }[] = networks;
 
   constructor(
     private _formBuilder: FormBuilder,
@@ -83,13 +94,13 @@ export class AppComponent implements OnInit, OnDestroy {
         createAssetParams
       );
 
-      console.log('RESULT', {
-        response,
-        err,
-      });
-
+      this.buttonText = 'Create';
       this.setLoading(false);
       this.setProperties(response, createAssetParams);
+
+      console.log(JSON.stringify(response));
+
+      this.stepper.next();
     } catch (err) {
       console.error('Error', err);
       this.setLoading(false);
@@ -98,19 +109,18 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   setProperties(response: any, params: any): void {
-    const assetId = response.createdAsset['asset-id'];
-    let linkToAsset: string;
+    this.response = response;
+    this.assetId = this.response.createdAsset['index'];
+    let assetLink: string;
 
     if (params.network.name.includes('Main')) {
-      linkToAsset = `https://algoexplorer.io/asset/${assetId}`;
-    }
-
-    if (params.network.name.includes('Beta')) {
-      linkToAsset = `https://betanet.algoexplorer.io/asset/${assetId}`;
+      assetLink = `https://algoexplorer.io/asset/${this.assetId}`;
     }
 
     if (params.network.name.includes('Test')) {
-      linkToAsset = `https://testnet.algoexplorer.io/asset/${assetId}`;
+      assetLink = `https://testnet.algoexplorer.io/asset/${this.assetId}`;
     }
+
+    this.assetLink = assetLink;
   }
 }

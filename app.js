@@ -20,8 +20,9 @@ function createWindow () {
       slashes: true
     })
   );
+
   // Open the DevTools.
-  // browserWinder.webContents.openDevTools()
+  browserWinder.webContents.openDevTools()
 
   browserWinder.on('closed', function () {
     browserWinder = null
