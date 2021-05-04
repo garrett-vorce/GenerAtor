@@ -8,7 +8,10 @@ import {
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
 import { Subject } from 'rxjs';
-import { AlgoTokenGeneratorService } from './services/algoTokenGenerator.service';
+import {
+  AlgoTokenGeneratorService,
+  CreationParams,
+} from './services/algoTokenGenerator.service';
 import { networks } from './utils/networks';
 
 @Component({
@@ -58,6 +61,7 @@ export class AppComponent implements OnInit, OnDestroy {
       unitName: ['', Validators.required],
       assetName: ['', Validators.required],
       assetURL: ['', Validators.required],
+      note: [''],
     });
   }
 
@@ -70,7 +74,7 @@ export class AppComponent implements OnInit, OnDestroy {
       return;
     }
 
-    const createAssetParams = {
+    const createAssetParams: CreationParams = {
       accounts: {
         accountOneMnemonic: this.firstFormGroup.get('accountOneMnemonic').value,
         accountTwoMnemonic: this.firstFormGroup.get('accountTwoMnemonic').value,
@@ -82,6 +86,7 @@ export class AppComponent implements OnInit, OnDestroy {
         unitName: this.secondFormGroup.get('unitName').value,
         assetName: this.secondFormGroup.get('assetName').value,
         assetURL: this.secondFormGroup.get('assetURL').value,
+        note: this.secondFormGroup.get('note').value,
       },
       network: this.firstFormGroup.get('network').value,
     };

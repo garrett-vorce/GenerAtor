@@ -53,6 +53,10 @@
           <mat-label>Asset URL</mat-label>
           <input matInput placeholder="Asset URL" formControlName="assetURL" required>
         </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Note</mat-label>
+          <input matInput placeholder="Note" formControlName="note">
+        </mat-form-field>
         <div style="display: flex; justify-content: space-between;">
           <button mat-raised-button matStepperPrevious class="prev" [disabled]="isLoading">Back</button>
           <button mat-raised-button class="next" (click)="createAsset()" color="primary"

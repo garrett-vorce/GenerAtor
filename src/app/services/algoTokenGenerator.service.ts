@@ -18,6 +18,7 @@ export interface CreationParams {
     unitName: string;
     assetName: string;
     assetURL: string;
+    note: string;
   };
   network: { name: string; host: string; token: string };
 }
@@ -159,14 +160,26 @@ export class AlgoTokenGeneratorService implements OnDestroy {
     accountTwo: Account
   ) {
     let params = await this.algosdk.getTransactionParams().do();
-    let note = undefined; // arbitrary data to be stored in the transaction; here, none is stored
+
+    const encoder = new TextEncoder();
+    const note = creationParams.asset.note
+      ? encoder.encode(String(creationParams.asset.note))
+      : undefined;
+
     let addr = accountOne.addr;
+
     let defaultFrozen = false;
+
     let decimals = 0;
+
     let totalIssuance = Number(creationParams.asset.totalIssuance);
+
     let unitName = String(creationParams.asset.unitName);
+
     let assetName = String(creationParams.asset.assetName);
+
     let assetURL = String(creationParams.asset.assetURL);
+
     let assetMetadataHash = '16efaa3924a6fd9d3a4824799a4ac65d';
 
     let manager = accountTwo.addr;
