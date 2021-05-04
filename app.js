@@ -6,8 +6,8 @@ let browserWinder
 
 function createWindow () {
   browserWinder = new BrowserWindow({
-    width: 1000,
-    height: 1000,
+    width: 800,
+    height: 600,
     webPreferences: {
       nodeIntegration: true,
     }
@@ -22,7 +22,7 @@ function createWindow () {
   );
 
   // Open the DevTools.
-  browserWinder.webContents.openDevTools()
+  // browserWinder.webContents.openDevTools()
 
   browserWinder.on('closed', function () {
     browserWinder = null

@@ -61,41 +61,45 @@
       </form>
     </mat-step>
     <mat-step>
-      <form style="display: flex; flex-direction: column;" *ngIf="response">
-        <ng-template matStepLabel>{{ response.createdAsset.params.name }}</ng-template>
+      <form style="display: flex; flex-direction: column;">
+        <ng-template matStepLabel>Complete</ng-template>
         <div style="margin-bottom: 15px;"></div>
-        <h2 *ngIf="assetLink">{{ response.createdAsset.params.name }} created: <a target="_blank"
-            [href]="assetLink">View on AlgoExplorer.io</a></h2>
-        <form style="display: flex; flex-direction: column;">
-          <mat-form-field appearance="outline">
-            <mat-label>Transaction</mat-label>
-            <input matInput placeholder="Transaction" readonly [value]="response.transaction.txId"
-              [cdkCopyToClipboard]="response.transaction.txId">
-            <mat-icon matSuffix>file_copy</mat-icon>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Account 1: Address</mat-label>
-            <input matInput placeholder="Account 1: Address" readonly [value]="response.accounts[0]"
-              [cdkCopyToClipboard]="response.accounts[0]">
-            <mat-icon matSuffix>file_copy</mat-icon>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Account 2: Address</mat-label>
-            <input matInput placeholder="Account 2: Address" readonly [value]="response.accounts[1]"
-              [cdkCopyToClipboard]="response.accounts[1]">
-            <mat-icon matSuffix>file_copy</mat-icon>
+        <div *ngIf="response">
+          <h2 *ngIf="assetLink">{{ response.createdAsset.params.name }} created: <a target="_blank"
+              [href]="assetLink">View
+              on AlgoExplorer.io</a></h2>
+          <form style="display: flex; flex-direction: column;">
+            <mat-form-field appearance="outline">
+              <mat-label>Transaction</mat-label>
+              <input matInput placeholder="Transaction" readonly [value]="response.transaction.txId"
+                [cdkCopyToClipboard]="response.transaction.txId">
+              <mat-icon matSuffix>file_copy</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Account 1: Address</mat-label>
+              <input matInput placeholder="Account 1: Address" readonly [value]="response.accounts[0]"
+                [cdkCopyToClipboard]="response.accounts[0]">
+              <mat-icon matSuffix>file_copy</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Account 2: Address</mat-label>
+              <input matInput placeholder="Account 2: Address" readonly [value]="response.accounts[1]"
+                [cdkCopyToClipboard]="response.accounts[1]">
+              <mat-icon matSuffix>file_copy</mat-icon>
 
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Account 3: Address</mat-label>
-            <input matInput placeholder="Account 3: Address" readonly [value]="response.accounts[2]"
-              [cdkCopyToClipboard]="response.accounts[2]">
-            <mat-icon matSuffix>file_copy</mat-icon>
-          </mat-form-field>
-          <div style="display: flex; justify-content: space-between;">
-            <button mat-raised-button matStepperPrevious class="prev" [disabled]="isLoading">Back</button>
-          </div>
-        </form>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Account 3: Address</mat-label>
+              <input matInput placeholder="Account 3: Address" readonly [value]="response.accounts[2]"
+                [cdkCopyToClipboard]="response.accounts[2]">
+              <mat-icon matSuffix>file_copy</mat-icon>
+            </mat-form-field>
+            <div style="display: flex; justify-content: space-between;">
+              <button mat-raised-button matStepperPrevious class="prev" [disabled]="isLoading">Back</button>
+            </div>
+          </form>
+        </div>
+
       </form>
     </mat-step>
   </mat-horizontal-stepper>
