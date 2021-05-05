@@ -1,6 +1,6 @@
 # Algorand - ASA Token Generator - 1.0
 
-![Algorand](https://raw.githubusercontent.com/garrett-vorce/algorand-generator/master/src/assets/logo/logo.png)
+![Algorand](https://raw.githubusercontent.com/garrett-vorce/algorand-generator/master/src/assets/logo/GenerAtor.jpeg)
 
 ## Overview
 
