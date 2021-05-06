@@ -27,7 +27,7 @@ This tool enables users to use new or existing credentials on the Algorand block
 Clone the repository
 
 ```bash
-git clone https://github.com/garrett-vorce/algorand-generator.git
+git clone https://github.com/garrett-vorce/GenerAtor.git
 ```
 
 Use [npm](https://www.npmjs.com/) to dependencies.
